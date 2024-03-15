@@ -13,8 +13,6 @@ public class PlayingBoard {
                 ==========================
                 Welcome to 3x3 Tic Tac Toe!
                 ==========================""");
-        System.out.println("[X's TURN]");
-        System.out.println();
 
 
     }
