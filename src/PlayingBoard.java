@@ -3,7 +3,7 @@ public class PlayingBoard {
     private final int rows = 3;
     private final int columns = 3;
 
-    private final String[][] board = new String[rows][columns];
+    private final Space[] board = new Space[9];
 
 
 
