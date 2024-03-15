@@ -1,9 +1,13 @@
 public class Player {
 
     private String turn;
-    private String[] move = new String[2];
+    private String x = "X";
+    private int col;
+    private int row;
 
-    public void makeMove(){}
+    public void makeMove(){
+
+    }
 
     public String getTurn() {
         return turn;
