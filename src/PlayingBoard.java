@@ -7,7 +7,21 @@ public class PlayingBoard {
 
     private final Space[] board = new Space[9];
     private String[] spaceString = new String[9];
-    private String board = "   |   |\n " + spaceString[0];
+    public void createBoard(){
+        String index;
+        for(int i = 0; i<spaceString.length; i++){
+            index = String.valueOf(i+1);
+            spaceString[i] = index;
+        }
+        String board_g = "   |   |\n " +
+                spaceString[0] + " | " + spaceString[1] + " | " + spaceString[2] +
+                "\n___|___|___\n "+
+                spaceString[3] + " | " + spaceString[4] + " | " + spaceString[5] +
+                "\n___|___|___\n "+
+                spaceString[6] + " | " + spaceString[7] + " | " + spaceString[8] +
+                "\n   |   |   \n ";
+        System.out.println(board_g);
+    }
 
     public void startTheGame(){
 
