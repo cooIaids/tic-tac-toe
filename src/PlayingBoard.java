@@ -12,6 +12,7 @@ public class PlayingBoard {
         for (int i = 0; i < spaceString.length; i++) {
             index = String.valueOf(i + 1);
             spaceString[i] = index;
+            board[i] = new Space(false, false);
         }
         board_g = "   |   |\n " +
                 spaceString[0] + " | " + spaceString[1] + " | " + spaceString[2] +
@@ -47,7 +48,8 @@ public class PlayingBoard {
         x = sc.nextInt();
         if (x >= 1 && x <= 9 && !board[x - 1].isTakenByComp() && !board[x - 1].isTakenByPlayer()) {
             spaceString[x - 1] = "x";
-            board[x - 1] = new Space(true, false);
+            board[x-1].setTakenByPlayer(true);
+            System.out.println(board[x-1].isTakenByPlayer());
         } else {
             System.out.println("WRONG");
         }
