@@ -37,24 +37,28 @@ public class PlayingBoard {
     public void startTheGame() {
 
         System.out.println("""
-                ==========================
-                Welcome to 3x3 Tic Tac Toe!
-                ==========================""");
+                ============================================================
+                WELCOME_TO_THE_SUPER_ULTRA_EPIC_AMAZING_GAME_OF_TIC_TAC_TOE!
+                ============================================================""");
     }
 
     public void move(){
-        System.out.println(board_g);
-        System.out.print("CHOOSE_A_PLACE_ON_THE_BOARD 1-9: ");
-        x = sc.nextInt();
-        if (x >= 1 && x <= 9 && !board[x - 1].isTakenByComp() && !board[x - 1].isTakenByPlayer()) {
-            spaceString[x - 1] = "x";
-            board[x-1].setTakenByPlayer(true);
-            System.out.println(board[x-1].isTakenByPlayer());
-        } else {
-            System.out.println("WRONG");
+        try{
+            System.out.println(board_g);
+            System.out.print("CHOOSE_A_PLACE_ON_THE_BOARD 1-9: ");
+            x = sc.nextInt();
+            if (x >= 1 && x <= 9 && !board[x - 1].isTakenByComp() && !board[x - 1].isTakenByPlayer()) {
+                spaceString[x - 1] = "x";
+                board[x-1].setTakenByPlayer(true);
+                System.out.println(board[x-1].isTakenByPlayer());
+            } else {
+                System.out.println("WRONG");
+            }
+            updateBoard();
+            System.out.println(board_g);
+        }catch (Exception e){
+            System.out.println("NO");
         }
-        updateBoard();
-        System.out.println(board_g);
 
     }
 
